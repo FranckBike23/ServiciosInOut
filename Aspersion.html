@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio de Aspersión</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .documento {
+            background-color: white;
+            max-width: 500px;
+            margin: auto;
+            padding: 30px;
+            border: 2px solid #000;
+            text-align: center;
+        }
+
+        img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        h2 {
+            margin-top: 10px;
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="documento">
+        
+    <img src="Logo.jpeg" alt="Logo de la empresa">
+    <h1>Servicio de Aspersion</h1>
+    <h2 id="fecha">mes + año</h2>
+    <script>
+        const fechaActual = new Date();
+
+        const mes = fechaActual.getMonth();
+        const anio = fechaActual.getFullYear();
+        
+        const meses = [
+        "Enero", "Febrero", "Marzo", "Abril",
+        "Mayo", "Junio", "Julio", "Agosto",
+        "Septiembre", "Octubre", "Noviembre", "Diciembre"
+        ];
+
+        const textoFecha = meses[mes] + " " + anio;
+        
+        document.getElementById("fecha").textContent = textoFecha;
+    </script>
+    </div>
+</body>
+</html>
